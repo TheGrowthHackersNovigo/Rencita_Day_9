@@ -1,0 +1,388 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,879" sap2010:WorkflowViewState.IdRef="Assignment_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <StateMachine InitialState="{x:Reference __ReferenceID0}" sap2010:Annotation.AnnotationText="How would you design and implement a number guessing game in UiPath using the State Machine, where the system generates a random number within a defined range (Say 0-9), and the player is given a maximum of five attempts to guess this number correctly? &#xA;Steps:&#xA;• Take user inputs for guesses&#xA;• Generate Random Number &#xA;• Evaluate these guesses against the generated number&#xA;• Providing feedback if the guess is too high, too low, or correct&#xA;• Additionally, Implement the logic to either exit the loop and end the game after five unsuccessful attempts or to exit the loop immediately upon a successful guess within the allotted attempts.&#xA;" DisplayName="Assignment_2" sap:VirtualizedContainerService.HintSize="634,814" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <x:Double x:Key="StateContainerWidth">600</x:Double>
+        <x:Double x:Key="StateContainerHeight">600</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,159</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Enter a number from 0 to 9 " DisplayName="Guess the number " sap:VirtualizedContainerService.HintSize="462,1085" sap2010:WorkflowViewState.IdRef="State_1">
+      <State.Entry>
+        <Sequence DisplayName="Sequence : Enter the number " sap:VirtualizedContainerService.HintSize="416,585" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Guess th number between 0 to 9 " DisplayName="Input Dialog : Natural number " sap:VirtualizedContainerService.HintSize="354,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;Guess the number&quot; + Environment.NewLine + &quot; Enter a integer between 0 - 10&quot;]" Title="Guess the number">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:Int32">[Guessednumber]</OutArgument>
+            </ui:InputDialog.Result>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InputDialog>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="Log users input " DisplayName="Log Message : Guessed number " sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Your input is &quot; + Guessednumber.ToString]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </State.Entry>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">233,159</av:Point>
+          <av:Size x:Key="ShapeSize">134,116</av:Size>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Double x:Key="StateContainerWidth">100</x:Double>
+          <x:Double x:Key="StateContainerHeight">37.08000000000004</x:Double>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <State.Transitions>
+        <Transition DisplayName="Guessed number is greater " sap:VirtualizedContainerService.HintSize="599,1328" sap2010:WorkflowViewState.IdRef="Transition_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:PointCollection x:Key="ConnectorLocation">367,217 397,217 397,129 346.9,129 346.9,159</av:PointCollection>
+              <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+              <x:Int32 x:Key="DestConnectionPointIndex">66</x:Int32>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Transition.To>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </Transition.To>
+          <Transition.Action>
+            <Sequence DisplayName="Sequence : Ask user to enter smaller number " sap:VirtualizedContainerService.HintSize="496,950" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display message that the guessed number is greater . " AutoCloseAfter="00:00:00" DisplayName="Message Box : Smaller number " sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;You have entered a greater number than the secret number &quot; + Environment.NewLine + &quot;Please enter a smaller number &quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Display message that the guessed number is greater . " DisplayName="Log Message : Smaller number " sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;You have entered a greater number than the secret number &quot; + Environment.NewLine + &quot;Please enter a smaller number &quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display message to user - loss a attempt and display the number of attempt left " AutoCloseAfter="00:00:00" DisplayName="Message Box : Number of guess " sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;You have guessed &quot; +NumberOfGuess.ToString + &quot;number of times. Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Display message to user - loss a attempt and display the number of attempt left " DisplayName="Log Message : Number of guess " sap:VirtualizedContainerService.HintSize="434,215" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;You have guessed &quot; +NumberOfGuess.ToString + &quot;number of times. Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <Assign sap2010:Annotation.AnnotationText="Increement the number of guess counter " DisplayName="Assign : Increement " sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[NumberOfGuess]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[NumberOfGuess+1]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+            </Sequence>
+          </Transition.Action>
+          <Transition.Condition>[(SecretNumber&lt;Guessednumber) andalso (NumberOfGuess &lt;3)]</Transition.Condition>
+        </Transition>
+        <Transition DisplayName="Guessed number is smaller " sap:VirtualizedContainerService.HintSize="599,1082" sap2010:WorkflowViewState.IdRef="Transition_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:PointCollection x:Key="ConnectorLocation">233,222.8 219.89999999999998,222.8 219.89999999999998,129 279.9,129 279.9,159</av:PointCollection>
+              <x:Int32 x:Key="SrcConnectionPointIndex">41</x:Int32>
+              <x:Int32 x:Key="DestConnectionPointIndex">26</x:Int32>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Transition.To>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </Transition.To>
+          <Transition.Action>
+            <Sequence DisplayName="Sequence : smaller number " sap:VirtualizedContainerService.HintSize="496,704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display the user - entered number is smaller and ask to enter larger number " AutoCloseAfter="00:00:00" DisplayName="Message Box : Enter greater number " sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;You have entered a smaller number than the secret number &quot; + Environment.NewLine + &quot;Please enter a larger number  number &quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Display the user number of attempts left " DisplayName="Log Message : Enter greater number " sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;You have gussed &quot; +NumberOfGuess.ToString + &quot;number of times  Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display the user number of attempts left " AutoCloseAfter="00:00:00" DisplayName="Message Box : Number of attempt" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;You have gussed &quot; +NumberOfGuess.ToString + &quot;number of times . Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <Assign DisplayName="Assign : Increement counter " sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[NumberOfGuess]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[NumberOfGuess+1]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Transition.Action>
+          <Transition.Condition>[(SecretNumber &gt; Guessednumber) andalso (NumberOfGuess &lt;3)]</Transition.Condition>
+        </Transition>
+        <Transition DisplayName="guessed number is out of required range " sap:VirtualizedContainerService.HintSize="599,1082" sap2010:WorkflowViewState.IdRef="Transition_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:PointCollection x:Key="ConnectorLocation">233,251.8 213.2,251.8 213.2,305 273.2,305 273.2,275</av:PointCollection>
+              <x:Int32 x:Key="SrcConnectionPointIndex">61</x:Int32>
+              <x:Int32 x:Key="DestConnectionPointIndex">23</x:Int32>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Transition.To>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </Transition.To>
+          <Transition.Action>
+            <Sequence DisplayName="Sequence : Enter within range  " sap:VirtualizedContainerService.HintSize="496,704" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display message the guessed number is out of required range and specify the range " AutoCloseAfter="00:00:00" DisplayName="Message Box : Specify the range " sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;You have given a input out of the required range&quot; + Environment.NewLine + &quot; Enter number between 0 to 9&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message the number of attempts remained " DisplayName="Log Message : Number of attempt" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;You have guessed &quot; +NumberOfGuess.ToString + &quot; number of times.  Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Log message the number of attempts remained " AutoCloseAfter="00:00:00" DisplayName="Message Box : Number of attempt " sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;You have gussed &quot; +NumberOfGuess.ToString + &quot; number of times.  Your number of attempts left are &quot; + ( 3- NumberOfGuess).ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <Assign DisplayName="Assign : Increement the counter " sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[NumberOfGuess]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[NumberOfGuess+1]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Transition.Action>
+          <Transition.Condition>[(Guessednumber &lt;0 and Guessednumber &gt;9) andalso (NumberOfGuess &lt;3)]</Transition.Condition>
+        </Transition>
+        <Transition DisplayName="Correct guess " sap:VirtualizedContainerService.HintSize="519,809" sap2010:WorkflowViewState.IdRef="Transition_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:PointCollection x:Key="ConnectorLocation">313.4,275 313.4,408</av:PointCollection>
+              <x:Int32 x:Key="SrcConnectionPointIndex">47</x:Int32>
+              <x:Int32 x:Key="DestConnectionPointIndex">46</x:Int32>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Transition.To>
+            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="The process terminates " DisplayName="Final State : Terminate" sap:VirtualizedContainerService.HintSize="134,104" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
+              <State.Entry>
+                <ui:LogMessage DisplayName="Log Message : End" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;The process terminated &quot;]" />
+              </State.Entry>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">233,408</av:Point>
+                  <av:Size x:Key="ShapeSize">134,104</av:Size>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </State>
+          </Transition.To>
+          <Transition.Action>
+            <Sequence DisplayName="Sequence : Win " sap:VirtualizedContainerService.HintSize="416,431" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Display the user the winning message " AutoCloseAfter="00:00:00" DisplayName="Message Box : Display winning message " sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot; Yipeee!! You guessed a correct number !!  &quot; + Environment.NewLine + &quot; The number is &quot; + SecretNumber.ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message - the winning message " DisplayName="Log Message : Display winning message " sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; Yipeee!! You guessed a correct number !!  &quot; + Environment.NewLine + &quot; The number is &quot; + SecretNumber.ToString]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </Sequence>
+          </Transition.Action>
+          <Transition.Condition>[SecretNumber = Guessednumber]</Transition.Condition>
+        </Transition>
+        <Transition DisplayName="Maximum attempts " sap:VirtualizedContainerService.HintSize="519,778" sap2010:WorkflowViewState.IdRef="Transition_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:PointCollection x:Key="ConnectorLocation">333.5,275 333.5,408</av:PointCollection>
+              <x:Int32 x:Key="SrcConnectionPointIndex">59</x:Int32>
+              <x:Int32 x:Key="DestConnectionPointIndex">58</x:Int32>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Transition.To>
+            <x:Reference>__ReferenceID1</x:Reference>
+          </Transition.To>
+          <Transition.Action>
+            <Sequence DisplayName="Sequence : User lost" sap:VirtualizedContainerService.HintSize="416,400" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Better luck message " sap:VirtualizedContainerService.HintSize="354,117" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot; Oppp!!!  Number of attempts have reached the maximum ! &quot; + Environment.NewLine + &quot; Better luck next time !!!&quot;]" />
+              <ui:LogMessage sap2010:Annotation.AnnotationText="" DisplayName="Log Message : Better luck message " sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot; Oppp!!!  Number of attempts have reached the maximum ! &quot; + Environment.NewLine + &quot; Better luck next time !!!&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </Sequence>
+          </Transition.Action>
+          <Transition.Condition>[NumberOfGuess = 3]</Transition.Condition>
+        </Transition>
+      </State.Transitions>
+    </State>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <StateMachine.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="[new Random().Next(0,9)]" Name="SecretNumber" />
+      <Variable x:TypeArguments="x:Int32" Name="Guessednumber" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="NumberOfGuess" />
+    </StateMachine.Variables>
+  </StateMachine>
+</Activity>
